@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electric Store Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1> Sadiq Electric Store </h1>
+    </header>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    <nav>
+        <a href="items.html">Add/Remove Items</a>
+        <a href="sales.html">Sales Reports</a>
+        <a href="customer.html">Customer Credit Info</a>
+        <a href="orders.html">Manage Orders</a>
+        <a href="setting.html">Settings</a>
+    </nav>
+    <main>
+        <h2>Current Inventory</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item ID</th>
+                    <th>Item Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody id="itemList">
+                <!-- Inventory items will be populated here -->
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <p>&copy; 2024 Electric Store. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

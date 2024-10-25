@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Orders</title>
+    <link rel="stylesheet" href="oder.css">
+</head>
+<body>
+    <header>
+        <h1>Manage Orders</h1>
+        <nav>
+            <a href="index.html">Dashboard</a>
+            <a href="customer.html">Customer Credit Info</a>
+            <a href="sales.html">Sales Report</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Add New Order</h2>
+            <form id="addOrderForm">
+                <input type="text" id="customerName" placeholder="Customer Name" required>
+                <input type="text" id="orderItem" placeholder="Order Item" required>
+                <input type="number" id="orderQuantity" placeholder="Quantity" required>
+                <input type="number" id="orderPrice" placeholder="Price" required step="0.01">
+                <button type="submit">Add Order</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Update Order</h2>
+            <form id="updateOrderForm">
+                <input type="number" id="updateOrderId" placeholder="Order ID" required>
+                <input type="text" id="updateCustomerName" placeholder="New Customer Name" required>
+                <input type="text" id="updateOrderItem" placeholder="New Order Item" required>
+                <input type="number" id="updateOrderQuantity" placeholder="New Quantity" required>
+                <input type="number" id="updateOrderPrice" placeholder="New Price" required step="0.01">
+                <button type="submit">Update Order</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Remove Order</h2>
+            <input type="number" id="removeOrderId" placeholder="Order ID to Remove" required>
+            <button id="removeOrderButton">Remove Order</button>
+        </section>
+
+        <section>
+            <h2>Current Orders</h2>
+            <table id="orderTable">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer Name</th>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody id="orderTableBody">
+                    <!-- Order details will be dynamically populated here -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>Manage your orders efficiently</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

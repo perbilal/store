@@ -1,0 +1,315 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif; /* Use a modern font */
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #2c3e50, #4ca1af); /* Gradient background */
+    color: #f9f9f9;
+    min-height: 100vh;
+}
+
+header {
+    background-color: rgba(44, 62, 80, 0.9);
+    color: #fff;
+    padding: 1.5em 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    letter-spacing: 0.05em;
+    animation: fadeInDown 1s ease-out;
+}
+
+nav {
+    background-color: rgba(52, 73, 94, 0.8);
+    padding: 1em;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: -10px;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 1.5em;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    padding: 0.5em 0;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #4ca1af;
+    transform: scale(1.1);
+}
+
+main {
+    padding: 3em;
+    background-color: rgba(255, 255, 255, 0.9);
+    max-width: 900px;
+    margin: 3em auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    animation: slideUp 0.8s ease-out;
+}
+
+h2 {
+    color: #34495e;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+p{
+    color: #34495e;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    height: 50vh;
+    border-collapse: collapse;
+    margin-top: 2em;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 1em;
+    text-align: left;
+    font-size: 1rem;
+    border-bottom: 2px solid #ecf0f1;
+}
+
+table th {
+    background-color: #2980b9;
+    color: #fff;
+}
+
+table tr:nth-child(even) {
+    background-color: #ecf0f1;
+}
+
+table tr:hover {
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Buttons */
+button {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #27ae60;
+    transform: scale(1.05);
+}
+
+/* Form Styling */
+form {
+    margin-top: 1.5em;
+    animation: fadeInUp 1s ease;
+}
+
+form input {
+    padding: 0.75em;
+    margin: 0.5em 0;
+    width: calc(100% - 1.5em);
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+form input:focus {
+    border-color: #3498db;
+    outline: none;
+    transform: scale(1.02);
+}
+
+/* Footer */
+footer {
+    background-color: rgba(52, 73, 94, 0.9);
+    color: white;
+    text-align: center;
+    padding: 1.5em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/* Responsive Design */
+@media (max-width: 767px) {
+    nav {
+        flex-direction: column; /* Stack nav links on smaller screens */
+        text-align: center; /* Center align */
+        padding: 10px; /* Add padding for better touch targets */
+    }
+
+    nav a {
+        margin: 5px 0; /* Margin between links */
+        padding: 10px; /* Increase padding for larger tap area */
+        font-size: 1.1rem; /* Slightly larger font for readability */
+    }
+
+    form {
+        flex-direction: column; /* Stack form elements */
+        width: 100%; /* Ensure form takes full width */
+    }
+
+    form label, form input, form select, form button {
+        flex: 1 1 100%; /* Full width on mobile */
+        margin: 0 0 10px; /* Spacing below elements */
+    }
+
+    button {
+        padding: 1em; /* Larger button padding */
+        font-size: 1rem; /* Ensure buttons are readable */
+    }
+
+    section h2 {
+        font-size: 1.4rem; /* Responsive font size */
+        margin: 10px 0; /* Space around section headings */
+    }
+
+    header h1 {
+        font-size: 1.6rem; /* Adjust header size for smaller screens */
+        margin: 10px 0; /* Space around header */
+    }
+
+    /* Additional mobile styles */
+    main {
+        padding: 10px; /* Add padding around main content */
+    }
+
+    table {
+        width: 100%; /* Ensure table fits the screen */
+        overflow-x: auto; /* Allow horizontal scrolling if needed */
+    }
+}
+
+@media (min-width: 768px) {
+    nav {
+        justify-content: space-between; /* Spread links on larger screens */
+    }
+
+    form {
+        flex-direction: row; /* Side-by-side on larger screens */
+        flex-wrap: wrap; /* Allow wrapping */
+        justify-content: space-between; /* Space out form elements */
+    }
+
+    form label, form input, form select, form button {
+        flex: 1 1 45%; /* Flex-basis for form elements */
+        margin-right: 1em; /* Spacing between elements */
+    }
+
+    form button {
+        flex: 1 1 100%; /* Full width button */
+    }
+
+    section h2 {
+        font-size: 1.5rem; /* Increase size for larger screens */
+    }
+
+    header h1 {
+        font-size: 2rem; /* Larger header for larger screens */
+    }
+}
+
+@media (min-width: 1024px) {
+    main {
+        max-width: 80%; /* Center main content */
+        margin: auto; /* Center alignment */
+    }
+
+    section {
+        padding: 20px; /* Add padding for larger screens */
+    }
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) and (max-width: 1023px) {
+    nav {
+        flex-direction: row; /* Horizontal layout on tablets */
+        flex-wrap: wrap; /* Allow wrapping */
+    }
+
+    nav a {
+        margin: 0 10px; /* Standardize margin */
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+    main {
+        max-width: 90%; /* Center main content */
+        margin: auto; /* Center alignment */
+    }
+
+    section {
+        padding: 30px; /* Increased padding for desktop */
+    }
+
+    table {
+        margin-top: 20px; /* Space above table */
+    }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Credit Info</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Customer Credit Information</h1>
+    <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="items.html">Add/Remove Items</a>
+    </nav>
+
+    <h2>Add Customer Credit</h2>
+    <form id="creditForm">
+        <input type="text" id="customerName" placeholder="Customer Name" required>
+        <input type="object" id="objectname" placeholder="Object-name" required>
+        <input type="number" id="creditAmount" placeholder="Credit Amount" required step="0.01">
+        <input type="number" id="objectId" placeholder="Object Id" required step="0.01">
+        <input type="date" id="creditDate" placeholder="Credit Date" required>
+        <input type="time" id="creditTime" placeholder="Credit Time" required>
+        <button type="submit">Add Credit</button>
+    </form>
+
+    <h2>Current Customer Credits</h2>
+    <ul id="creditList"></ul>
+
+    <script src="script.js"></script>
+</body>
+</html>
